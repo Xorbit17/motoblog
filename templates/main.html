@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<h1>Dit is een verwerkte template.</h1>
+<ul>
+    {% for s in string_list %}
+    <li>{{s}}</li>
+    {% end %}
+    {% if show %}
+        <p>Dit is een geheime ding</p>
+    {% end %}
+</ul>
+</body>
+</html>

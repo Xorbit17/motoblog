@@ -4,10 +4,11 @@ import os
 
 
 class HomePageHandler(RequestHandler):
-    def get(self):
-        f = open(os.path.join(os.path.dirname(__file__), "..\\static\\test.html"), "rb")
+    def get(self, match):
+        f = open(os.path.join(os.path.dirname(__file__), "..\\static\\ex.html"), "rb")
         self.write(f.read())
         f.close()
+
 
 
 class CategoryListPageHandler(RequestHandler):
