@@ -11,7 +11,7 @@ def make_app():
         (r"/category-list/", handlers.page_handlers.CategoryListPageHandler),
         (r"/show-article", handlers.page_handlers.ArticlePageHandler),
         (r"/static/(.*)", tornado.web.StaticFileHandler,
-         {"path": os.path.join(os.path.dirname(__file__), "static")}
+         {"path": os.path.join(os.path.dirname(__file__), "templates\\static")}
          ),
         (r"/(.*)", handlers.page_handlers.HomePageHandler)
     ])

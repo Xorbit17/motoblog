@@ -1,29 +1,38 @@
-[
+{"chicks-dig-bikes":
   {
     "file-folder":"chicks-dig-bikes",
     "title":"Why chicks still dig motorcycles deep down inside",
     "category": ["RANT"],
     "date-created":"05-08-2019",
-    "dat-modified":"05-08-2019",
+    "date-modified":"05-08-2019",
     "summary":"Modern women still melt inside when they see a powerful man on a powerful bike. They just cannot admit it because of the postmodernists and feminists. It is like we are still the night that will save the princess from the dragon. ",
     "thumbnail":"thumb.jpg"
-  },
+  },"honda-cb1000r-review":
   {
     "file-folder":"honda-cb1000r-review",
     "title":"Honda CB1000R motorcycle review",
     "category": ["MOTO"],
     "date-created":"05-08-2019",
-    "dat-modified":"05-08-2019",
+    "date-modified":"05-08-2019",
     "summary":"This bike is the orphaned love child of a genius and his mistress. A distinguished gentleman that likes the occasional bar fight. It's the Daniel Craig of motorcycles.",
     "thumbnail":"thumb.jpg"
-  },
+  },"ktm-690-review":
   {
     "file-folder":"ktm-690-review",
     "title":"KTM 690 Duke motorcycle review",
     "category": ["MOTO"],
     "date-created":"05-08-2019",
-    "dat-modified":"05-08-2019",
-    "summary":"Super light roadster with a single piston the size of an ashtray. Gives lots of torque, doesn't weigh anything. Slightly less vibration then you might expect but maximum attack mode is by far the preferred mode of operation.",
+    "date-modified":"05-08-2019",
+    "summary":"Super light roadster with a single piston the size of an ashtray. Gives lots of torque, doesn't weigh anything. Slightly less vibration then you might expect Maximum attack is by far the preferred mode of operation.",
+    "thumbnail":"thumb.jpg"
+  },"yamaha-mt10-review":
+  {
+    "file-folder":"yamaha-mt10-review",
+    "title":"Yamaha MT-10 Duke motorcycle review",
+    "category": ["MOTO"],
+    "date-created":"05-08-2019",
+    "date-modified":"05-08-2019",
+    "summary":"Deeply evil machine that smiles every time a puppy gets hurt. Wheelies like nothing else. Looks like the result of a magnet dragged through a scrap heap.",
     "thumbnail":"thumb.jpg"
   }
 ]

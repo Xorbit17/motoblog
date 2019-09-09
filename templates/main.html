@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <title>{{ page_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="static/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="static/css/app.css">
 </head>
 <body>
-<h1>Dit is een verwerkte template.</h1>
-<ul>
-    {% for s in string_list %}
-    <li>{{s}}</li>
-    {% end %}
-    {% if show %}
-        <p>Dit is een geheime ding</p>
-    {% end %}
-</ul>
+{% block nav %}
+
+{% end %}
+
+{% block image %}
+
+{% end %}
+
+{% block content %}
+
+{% end %}
+
+{% block footer %}
+<div class="container bg-dark text-light pt-4 pb-4">
+    <!--Just a black bar, no content -->
+</div>
+{% end %}
+
+<!--Scripts-->
+<script src="static/js/jquery-3.4.1.min.js"></script><!--Bootstrap dependency-->
+<script src="static/js/popper.min.js"></script><!--Bootstrap dependency-->
+<script src="static/js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,19 @@
+{% extends main.html %}
+
+{% block nav %}
+{% include nav.html %}
+{% end %}
+
+{% block image %}
+{% include image.html %}
+{% end %}
+
+{% block footer %}
+{% include footer.html %}
+{% end %}
+
+{% block content %}
+<div class="container">
+    {{ body_html }}
+</div>
+{% end %}
