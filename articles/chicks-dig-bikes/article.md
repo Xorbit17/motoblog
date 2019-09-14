@@ -1,6 +1,6 @@
 # Come on girls! Just admit it already
 
-[intro]: ./manigale.png "Logo Title Text 2"
+[intro]: /articles/chicks-dig-bikes/manigale.png "Logo Title Text 2"
 
 ![alt text][intro]
 

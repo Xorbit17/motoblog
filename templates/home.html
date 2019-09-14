@@ -1,0 +1,42 @@
+{% extends main.html %}
+
+{% block nav %}
+{% include nav.html %}
+{% end %}
+
+{% block image %}
+{% include image.html %}
+{% end %}
+
+{% block footer %}
+{% include footer.html %}
+{% end %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Welcome to Motoblog</h1>
+            <p>If you find a better motoblog on the web. You must be another solar system</p>
+            <h3>Recent articles:</h3>
+
+        </div>
+    </div>
+    <div class="row">
+        {% for article in recent_articles %}
+        <div class="col-lg-3">
+            <div class="card">
+                <img src="{{ "/articles/" + article["file-folder"] + "/" + article["thumbnail"] }}" class="card-img-top"
+                     alt="Article thumbnail">
+                <div class="card-body">
+                    <a class="h5 card-title" href="/show-article/{{ article["file-folder"] }}">{{ article["title"] }}</a>
+                    <p class="card-text">{{ article["summary"] }}</p>
+                </div>
+            </div>
+        </div>
+        {% end %}
+    </div>
+
+
+</div>
+{% end %}

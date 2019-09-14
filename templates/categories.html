@@ -1,0 +1,54 @@
+{% extends main.html %}
+
+{% block nav %}
+{% include nav.html %}
+{% end %}
+
+{% block image %}
+{% include image.html %}
+{% end %}
+
+{% block footer %}
+{% include footer.html %}
+{% end %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Articles by category</h1>
+        </div>
+    </div>
+    {% for category in category_article_data %}
+    <div class="row">
+        <div class="col-12">
+            <h3>{{ category["category-title"] }}</h3>
+        </div>
+    </div>
+    <div class="row">
+        {% if len(category["articles_list"])==0 %}
+        <div class="col-12">
+            <p>No articles in this category yet!</p>
+        </div>
+
+        {% end %}
+
+        {% for article in category["articles_list"] %}
+        <div class="col-lg-3">
+            <div class="card">
+                <img src="{{ "/articles/" + article["file-folder"] + "/" + article["thumbnail"] }}"
+                     class="card-img-top"
+                     alt="Article thumbnail">
+                <div class="card-body">
+                    <a class="h5 card-title" href="/show-article/{{ article["file-folder"] }}">{{ article["title"] }}</a>
+                    <p class="card-text">{{ article["summary"] }}</p>
+                </div>
+            </div>
+        </div>
+        {% end %}
+    </div>
+    {% end %}
+
+
+</div>
+{% end %}

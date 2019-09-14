@@ -1,0 +1,13 @@
+{% extends main.html %}
+
+
+{% block footer %}
+{% include footer.html %}
+{% end %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ error_title }}</h1>
+    <p> {{ error_body }}</p>
+</div>
+{% end %}

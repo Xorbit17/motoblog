@@ -4,17 +4,25 @@ import tornado.web
 import handlers.page_handlers
 import os
 
+TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "templates")
+
 
 # We krijgen een request binnen: "GET index.html"
 def make_app():
-    return tornado.web.Application([  # LIST OF TUPLES  (regular expression, handler opbject)
-        (r"/category-list/", handlers.page_handlers.CategoryListPageHandler),
-        (r"/show-article", handlers.page_handlers.ArticlePageHandler),
-        (r"/static/(.*)", tornado.web.StaticFileHandler,
+    app = tornado.web.Application([  # LIST OF TUPLES  (regular expression, handler opbject)
+        (r"/home", handlers.page_handlers.HomePageHandler),
+        (r"/categories", handlers.page_handlers.CategoryListPageHandler),
+        (r"/show-article/(.*)", handlers.page_handlers.ArticlePageHandler),  # Hander that renders an article
+        (r"/articles/(.*)", tornado.web.StaticFileHandler,  # Static file hander for images in articles
+         {"path": os.path.join(os.path.dirname(__file__), "articles")}
+         ),
+        (r"/static/(.*)", tornado.web.StaticFileHandler,  # Static file hander for site assets such as css, js, images
          {"path": os.path.join(os.path.dirname(__file__), "templates\\static")}
          ),
-        (r"/(.*)", handlers.page_handlers.HomePageHandler)
+        (r"/", handlers.page_handlers.HomePageHandler)
     ])
+    app.settings["template_path"] = TEMPLATE_PATH
+    return app
 
 
 if __name__ == "__main__":
