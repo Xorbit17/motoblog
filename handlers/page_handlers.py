@@ -21,7 +21,7 @@ default_nav = {
         dict(link="/categories", caption="Articles by category"),
     ],
     "dropdowns": [
-
+        # this list is populated
     ]
 }
 for c in Category:
@@ -34,6 +34,8 @@ for c in Category:
         default_nav["dropdowns"].append({"caption_dropdown": c.value, "items": []})
         for a in cat_list:
             default_nav["dropdowns"][-1]["items"].append(dict(link="articles/" + a, caption=articles_data[a]["title"]))
+
+# default nav is klaar
 
 # Make a data structure to look up articles by creation date
 # A dict mapping a python date object to an article link
@@ -56,7 +58,7 @@ for c in Category:
     category_articles[c] = cat_list
 
 
-# Make
+# "Database" is ready
 
 
 def get_template_path(template_name):

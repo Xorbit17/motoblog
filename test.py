@@ -1,14 +1,16 @@
-from tornado import template
+ex_list = ["Dennis", 12]  # MUTABLE!! #Dit heeft een kost
+
+ex_list[0] = "Pommetje horlepiep"
+ex_list.append("Kakadee")
 
 
-def get_strings():
-    return ["Kaka " + str(i) for i in range(1000)]
+ex_tuple = (12, "Lolz")  # IMMUTABLE  #Dit is efficient met geheugen
 
+ex_dict = {"key_1": 12, "key_2": ("Kaka", "Dee")}  # MUTABLE Nog een hogere kost dan een list, maar niet veel
+ex_dict_idem = dict(key_1=12,key_2=("Kaka", "Dee"))  # Zelfde
+# Alles kan dienen als key, zolang immutable
 
-loader = template.Loader("templates/")
-f = open("result.html", "w")
-f.write(loader.load("main.html").generate(
-    title="Protput",
-    string_list=get_strings(),
-    show=True).decode("utf-8"))
-f.close()
+import json  # Heel snel
+
+var_dict = json.loads("{\"key_1\": 12, \"key_2\":30}")
+
